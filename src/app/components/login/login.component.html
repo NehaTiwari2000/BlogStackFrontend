@@ -1,28 +1,54 @@
-<!-- <header>
-    <nav class="nav container" style=" padding: 25px 60px;">
-
-        <h2 class="nav_logo"><a href="#"><a style="color: black;">Blog</a><a>Stack</a></a></h2>
-
-        <ul class="menu_items">
-            <img src="../../assets/times.svg" alt="timesicon" id="menu_toggle" />
-            <li class="nav_link"><a routerLink="" class="nav_link">Home</a></li>
-            <li class="nav_link"><a routerLink="" class=" nav_link">About</a></li>
-            <li class="nav_link"><a routerLink="login" class="nav_link">Login</a></li>
-            <li class="nav_link"><a href="#" class="nav_link">SignUp</a></li>
-            <li class="nav_link"><a href="#" class="nav_link">Contact</a></li>
-        </ul>
-        <img src="../../assets/bars.svg" alt="timesicon" id="menu_toggle" />
-    </nav>
-</header> -->
-<!-- Header End -->
-
 <!-- Hero Start -->
+
 <section class="hero">
 
     <div class="row container">
         <div class="column">
-            <div>
-                
+            <div class="container" style="margin-left: 5px; margin-bottom: 30px; position:relative; left:80px; bottom:-10px;" >
+                <mat-tab-group>
+                    <mat-tab label="Login">
+                        <form class="example-form">
+                           <div style="padding: 20px;">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Username</mat-label>
+                                <input matInput placeholder="Username">
+                              </mat-form-field>
+                              <mat-form-field class="example-full-width">
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Password">
+                              </mat-form-field>
+                           </div>
+                          </form>
+                          <button mat-raised-button color="warn" class="btnstyle">Login</button>
+                    </mat-tab>
+                    <mat-tab label="SignUp">
+                        <form class="example-form">
+                            <div style="padding: 20px;">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput placeholder="Username">
+                                  </mat-form-field>
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput placeholder="Username">
+                                  </mat-form-field>
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Email Id</mat-label>
+                                    <input matInput placeholder="Email">
+                                  </mat-form-field>
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput placeholder="Password">
+                                  </mat-form-field>
+                                  <mat-form-field class="example-full-width">
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input matInput placeholder="Password">
+                                  </mat-form-field>
+                            </div>
+                          </form>
+                          <button mat-raised-button color="warn" class="btnstyle">SignUp</button>
+                    </mat-tab>
+                  </mat-tab-group>   
             </div>
         </div>
         <div class="column">

@@ -12,7 +12,7 @@
 main {
   background: #f8f8f8;
 }
-.container {
+.container1 {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
@@ -59,11 +59,11 @@ a {
   gap: 30px;
   justify-content: space-between;
 }
-.hero .row h2,
+.hero .row .text,
 .hero .row p {
   color:black;
 }
-.hero .row h2 {
+.hero .row .text {
   font-size: 36px;
   margin-bottom: 16px;
 }
@@ -159,7 +159,7 @@ a {
   .hero {
     padding-top: 80px;
   }
-  .hero .row h2 {
+  .hero .row .text {
     font-size: 26px;
   }
   .buttons {
@@ -174,3 +174,5 @@ a {
 .nav_link :hover{
 color: black;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
