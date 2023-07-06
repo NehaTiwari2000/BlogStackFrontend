@@ -7,46 +7,46 @@
             <div class="container" style="margin-left: 5px; margin-bottom: 30px; position:relative; left:80px; bottom:-10px;" >
                 <mat-tab-group>
                     <mat-tab label="Login">
-                        <form class="example-form">
+                        <form class="example-form" [formGroup]="LoginForm">
                            <div style="padding: 20px;">
                             <mat-form-field class="example-full-width">
                                 <mat-label>Username</mat-label>
-                                <input matInput placeholder="Username">
+                                <input matInput placeholder="Username" formControlName="email">
                               </mat-form-field>
                               <mat-form-field class="example-full-width">
                                 <mat-label>Password</mat-label>
-                                <input matInput placeholder="Password">
+                                <input matInput placeholder="Password" formControlName="password">
                               </mat-form-field>
                            </div>
                           </form>
-                          <button mat-raised-button color="warn" class="btnstyle">Login</button>
+                          <button mat-raised-button color="warn" class="btnstyle" (click)="login()">Login</button>
                     </mat-tab>
                     <mat-tab label="SignUp">
-                        <form class="example-form">
+                        <form class="example-form" [formGroup]="signUp">
                             <div style="padding: 20px;">
                                 <mat-form-field class="example-full-width">
                                     <mat-label>First Name</mat-label>
-                                    <input matInput placeholder="Username">
+                                    <input matInput placeholder="Username" formControlName="firstName">
                                   </mat-form-field>
                                   <mat-form-field class="example-full-width">
                                     <mat-label>Last Name</mat-label>
-                                    <input matInput placeholder="Username">
+                                    <input matInput placeholder="Username" formControlName="lastName">
                                   </mat-form-field>
                                   <mat-form-field class="example-full-width">
                                     <mat-label>Email Id</mat-label>
-                                    <input matInput placeholder="Email">
+                                    <input matInput placeholder="Email" formControlName="emailId">
                                   </mat-form-field>
                                   <mat-form-field class="example-full-width">
                                     <mat-label>Password</mat-label>
-                                    <input matInput placeholder="Password">
+                                    <input matInput placeholder="Password" formControlName="password">
                                   </mat-form-field>
                                   <mat-form-field class="example-full-width">
                                     <mat-label>Confirm Password</mat-label>
-                                    <input matInput placeholder="Password">
+                                    <input matInput placeholder="Password" formControlName="confirmPassword">
                                   </mat-form-field>
                             </div>
                           </form>
-                          <button mat-raised-button color="warn" class="btnstyle">SignUp</button>
+                          <button mat-raised-button color="warn" class="btnstyle" (click)="signUpForm()">SignUp</button>
                     </mat-tab>
                   </mat-tab-group>   
             </div>
