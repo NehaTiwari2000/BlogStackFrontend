@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -8,35 +6,43 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  LoginForm!: FormGroup;
 
-
-  constructor(private fb: FormBuilder) { }
-
+  constructor() { }
 
   ngOnInit(): void {
-    this.initLoginForm();
   }
-
-  initLoginForm() {
-    this.LoginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email, Validators.pattern('^.+@gmail.com$')]],
-      password: ['', [Validators.required]]
-    })
-  }
-
-  login() {
-    console.log("login values are ", this.LoginForm.value);
-    if (this.LoginForm.invalid) {
-      // Swal.fire('Hello world!');
-      Swal.fire({
-        icon: 'error',
-        title: '',
-        text: 'Please fill the form',
-        // footer: '<a href="">Why do I have this issue?</a>'
+  
+  initSignUpForm() {
+      this.signUp = this.fb.group({
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        emailId: ['', Validators.required],
+        password: ['', Validators.required],
+        confirmPassword: ['', Validators.required]
       })
     }
 
+  signUpForm(){
+   console.log("values of form", this.signUp.value);
+
+   if (this.signUp.get('password')?.value!=this.signUp.get('confirmPassword')?.value) {
+    alert("password not matched")
+   }
+
+   Object.values(this.signUp.controls).forEach(control => {
+    if (control.invalid) {
+      control.markAsDirty();
+      control.updateValueAndValidity({ onlySelf: true });
+    }
+  });
+  }
+  
+  login(){
+    console.log("value of login form",this.LoginForm.value);
   }
 
 }
+function login() {
+  throw new Error('Function not implemented.');
+}
+

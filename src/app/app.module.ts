@@ -29,7 +29,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
     MatButtonModule,
     MatTabsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
