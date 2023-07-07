@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
 
 // C:\Users\user\3D Objects\BloStack Repo\BlogStackFrontend\node_modules\sweetalert2
 @NgModule({
@@ -29,9 +28,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
     MatButtonModule,
     MatTabsModule,
     MatInputModule,
-    ReactiveFormsModule,
-    SweetAlert2Module
-  ],
+    ReactiveFormsModule,  ],
   providers: [],
   bootstrap: [AppComponent]
 })

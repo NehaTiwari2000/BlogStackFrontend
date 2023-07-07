@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.initSignUpForm();
+    this.initLoginForm();
   }
   
   initSignUpForm() {
@@ -23,6 +25,14 @@ export class LoginComponent implements OnInit {
         confirmPassword: ['', Validators.required]
       })
     }
+
+    initLoginForm() {
+      this.LoginForm = this.fb.group({
+        email: ['', Validators.required],
+        password: ['', Validators.required]
+      })
+    }
+  
 
   signUpForm(){
    console.log("values of form", this.signUp.value);
@@ -43,8 +53,5 @@ export class LoginComponent implements OnInit {
     console.log("value of login form",this.LoginForm.value);
   }
 
-}
-function login() {
-  throw new Error('Function not implemented.');
 }
 
