@@ -1,21 +1,39 @@
-<!-- Hero Start -->
-<section class="hero">
-    <div class="row container1">
-        <div class="column">
-            <h2 class="text">Top free tool and extension to <br />radiply grow you business</h2>
+<div class="container" style="padding-top: 5%; ">
+    <div class="row">
+        <div class="col-6" style="padding-top: 10%; position: static;">
+            <h2>Top free tool and extension to <br />radiply grow you business</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto?
                 Consectetur enim
                 obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum
                 voluptates dolorum
                 optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
-            <div class="buttons">
-                <button class="btn">Read More</button>
-                <button class="btn">Contact Us</button>
+            <br>
+            <div class="row">
+                <div class="col-1"></div>
+                <button mat-fab color="warn" aria-label="Example icon button with a delete icon" matTooltip="Read More"
+                    label="Read More" routerLink="login">
+                    <mat-icon>read_more</mat-icon>
+                </button>
+                <div class="col-1"></div>
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon"
+                    matTooltip="Contact Us" style="background-color: black;" routerLink="login">
+                    <mat-icon>contact_support</mat-icon>
+                </button>
+                <div class="col-1"></div>
+                <button mat-fab color="warn" aria-label="Example icon button with a delete icon" matTooltip="Blog"
+                    routerLink="login">
+                    <mat-icon>article</mat-icon>
+                </button>
+                <div class="col-1"></div>
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon"
+                    matTooltip="Stack Overflow" style="background-color: black;" routerLink="login">
+                    <mat-icon>question_answer</mat-icon>
+                </button>
             </div>
         </div>
-        <div class="column">
-            <img src="../../assets/hero.gif" alt="heroImg" class="hero_img" />
+        <div class="col-6" style="height: 50%;">
+            <img src="../../assets/hero.gif" alt="heroImg" />
         </div>
+
     </div>
-    <img src="../../assets/bg-bottom-hero.png" alt="" class="curveImg" />
-</section>
+</div>

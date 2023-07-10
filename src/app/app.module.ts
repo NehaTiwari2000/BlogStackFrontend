@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // C:\Users\user\3D Objects\BloStack Repo\BlogStackFrontend\node_modules\sweetalert2
 @NgModule({
@@ -28,7 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatTabsModule,
     MatInputModule,
-    ReactiveFormsModule,  ],
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTooltipModule],
   providers: [],
   bootstrap: [AppComponent]
 })

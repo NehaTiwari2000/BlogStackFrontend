@@ -1,14 +1,10 @@
 /* @import "~bootstrap/dist/css/bootstrap.css"; */
-/* every you want bootstrap pls import in the css file *
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
-
-/
-/* Hero */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: url(../../../assets/bg-dot.png), url(../../../assets/bg-dot.png), url(../../../assets/bg-round.png), url(../../../assets/bg-tree.png);
-  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
-  background-repeat: no-repeat;
+h2{
+font-family: 'Alatsi', sans-serif;
+font-size: xxx-large;
 }
+
