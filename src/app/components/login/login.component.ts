@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -51,6 +52,8 @@ export class LoginComponent implements OnInit {
   
   login(){
     console.log("value of login form",this.LoginForm.value);
+    Swal.fire('Hello world')
+
   }
 
 }
