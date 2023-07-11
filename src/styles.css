@@ -37,7 +37,7 @@ header {
 .menu_items {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 25px;
 }
 a {
   color:#f12b20;
