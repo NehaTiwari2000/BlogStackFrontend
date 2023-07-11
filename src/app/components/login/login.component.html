@@ -1,33 +1,61 @@
-<!-- <header>
-    <nav class="nav container" style=" padding: 25px 60px;">
-
-        <h2 class="nav_logo"><a href="#"><a style="color: black;">Blog</a><a>Stack</a></a></h2>
-
-        <ul class="menu_items">
-            <img src="../../assets/times.svg" alt="timesicon" id="menu_toggle" />
-            <li class="nav_link"><a routerLink="" class="nav_link">Home</a></li>
-            <li class="nav_link"><a routerLink="" class=" nav_link">About</a></li>
-            <li class="nav_link"><a routerLink="login" class="nav_link">Login</a></li>
-            <li class="nav_link"><a href="#" class="nav_link">SignUp</a></li>
-            <li class="nav_link"><a href="#" class="nav_link">Contact</a></li>
-        </ul>
-        <img src="../../assets/bars.svg" alt="timesicon" id="menu_toggle" />
-    </nav>
-</header> -->
-<!-- Header End -->
-
 <!-- Hero Start -->
-<section class="hero">
 
-    <div class="row container">
-        <div class="column">
-            <div>
-                
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-6" style="padding-top: 10%; position: static;">
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <form class="example-form" [formGroup]="LoginForm">
+            <div style="padding: 20px;">
+              <mat-form-field class="example-full-width">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" formControlName="email">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" formControlName="password" type="password">
+              </mat-form-field>
             </div>
-        </div>
-        <div class="column">
-            <img src="../../assets/hero.gif" alt="heroImg" class="hero_img" />
-        </div>
+          </form>
+          <button mat-raised-button color="warn" class="btnstyle" (click)="login()">Login</button>
+        </mat-tab>
+        <mat-tab label="SignUp">
+          <form class="example-form" [formGroup]="signUp">
+            <div style="padding: 20px;">
+              <mat-form-field class="example-full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Username" formControlName="firstName">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Username" formControlName="lastName">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email Id</mat-label>
+                <input matInput placeholder="Email" formControlName="emailId">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" formControlName="password" type="password">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput placeholder="Password" formControlName="confirmPassword" type="password">
+              </mat-form-field>
+            </div>
+          </form>
+          <button mat-raised-button color="warn" class="btnstyle" (click)="signUpForm()">SignUp</button>
+        </mat-tab>
+      </mat-tab-group>
     </div>
-    <img src="../../assets/bg-bottom-hero.png" alt="" class="curveImg" />
-</section>
+    <div class="col-6">
+      <img src="../../assets/hero.gif" alt="heroImg" />
+    </div>
+
+  </div>
+  <!-- <img src="../../assets/bg-bottom-hero.png" alt="" class="curveImg" /> -->
+
+</div>
+<!-- </div> -->
+<!-- </div> -->
