@@ -1,7 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-/* https://sweetalert2.github.io/  */
-
-/* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -10,14 +6,11 @@
   font-family: "Poppins", sans-serif;
    overflow: hidden;
 }
+
 main {
   background: #f8f8f86e;
 }
-/* .container1 {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-} */
+
 header {
   position: fixed;
   top: 0;
@@ -25,20 +18,24 @@ header {
   width: 100%;
   z-index: 1000;
 }
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 60px;
 }
+
 .nav_logo {
   padding: 10px 0;
 }
+
 .menu_items {
   display: flex;
   list-style: none;
   gap: 25px;
 }
+
 a {
   color:#f12b20;
   text-decoration: none;
@@ -50,6 +47,7 @@ a {
   width: 100%;
   pointer-events: none;
 }
+
 .hero .row {
   display: flex;
   align-items: center;
@@ -60,22 +58,27 @@ a {
   gap: 30px;
   justify-content: space-between;
 }
+
 .hero .row .text,
 .hero .row p {
   color:black;
 }
+
 .hero .row .text {
   font-size: 36px;
   margin-bottom: 16px;
 }
+
 .hero .column {
   width: 50%;
 }
+
 .buttons {
   display: flex;
   margin-top: 25px;
   gap: 10px;
 }
+
 .btn {
   padding: 14px 26px;
   background: #f12b20;
@@ -85,95 +88,29 @@ a {
   transition: all 0.3s ease;
   color:#fff;;
 }
+
 .btn:last-child {
   border: 2px solid #fff;
   background: transparent;
   color: #fff;
 }
+
 .btn:last-child:hover {
   background-color: black;
   color:#fff;;
 }
+
 .hero_img {
-  /* width: 100%; */
     height: 5%;
-    /* object-fit: none; */
-    /* object-position: 68% 100%; */
-    /* z-index: 10; */
-    /* position: relative; */
-    /* transform: scale(0.9) translate(0, 9%); */
 }
+
 #menu_toggle {
   display: none;
 }
 
-/* Reponsive */
-/* @media (width < 860px) {
-  #menu_toggle {
-    display: block;
-  }
-  .nav {
-    padding: 0 20px;
-    background-color: #f12b20;
-  }
-
-  .menu_items {
-    position: fixed;
-    top: 0;
-    width: 260px;
-    background-color: #fff;
-    height: 100%;
-    left: -100%;
-    padding: 50px 30px 30px;
-    flex-direction: column;
-    transition: all 0.5s ease;
-  }
-  .showMenu .menu_items {
-    left: 0;
-  }
-  a {
-    color: #333;
-  }
-  #menu_toggle {
-    width: 20px;
-    cursor: pointer;
-  }
-  .menu_items #menu_toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .hero {
-    padding-top: 130px;
-  }
-  .hero .row {
-    flex-direction: column;
-    padding: 0 20px;
-    justify-content: center;
-  }
-  .hero .row .column {
-    width: 100%;
-  }
-} */
-
-/* @media (width < 600px) {
-  .hero {
-    padding-top: 80px;
-  }
-  .hero .row .text {
-    font-size: 26px;
-  }
-  .buttons {
-    justify-content: center;
-  }
-  .btn {
-    padding: 10px 16px;
-  }
-} */
-
-
 .nav_link :hover{
 color: black;
 }
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,41 +1,65 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { BlogsComponent } from './components/blogs/blogs.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { StackComponent } from './components/stack/stack.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
-
-// C:\Users\user\3D Objects\BloStack Repo\BlogStackFrontend\node_modules\sweetalert2
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    BlogsComponent
+    BlogsComponent,
+    StackComponent,
+    ContactComponent,
+    UserProfileComponent,
+    UserListComponent,
+    SideBarComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatTabsModule,
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatTooltipModule],
+    MatTooltipModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
