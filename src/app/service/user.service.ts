@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Payload } from '../model/model';
+import { Payload, Root } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +17,11 @@ export class UserService {
     return this.httpClient.get(this.baseUrl);
   }
 
-  public updateUser(user: Payload): Observable<any>{
+  public updateUser(user: Root): Observable<any>{
     return this.httpClient.put(this.baseUrl, user);
    }
 
-  public deleteUser(email_id: Payload): Observable<any>{
+  public deleteUser(email_id: string): Observable<any>{
     return this.httpClient.delete(this.baseUrl + email_id);
   }
 }

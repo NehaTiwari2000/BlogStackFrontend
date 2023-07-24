@@ -60,7 +60,9 @@ export class LoginComponent implements OnInit {
     this.authService.signUp(this.signBean).subscribe((data) => {
       console.log(data);
       if (data.status) {
-        Swal.fire('Successfully Registered')
+        Swal.fire('Successfully Registered').then(()=>{
+          window.location.reload();
+        })
       }
     });
     if (

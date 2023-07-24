@@ -20,6 +20,7 @@ export interface User {
   }
 
   export interface Payload {
+    get(arg0: string): unknown
     password: any
     user_id: string
     email_id: string
@@ -38,5 +39,17 @@ export interface User {
     role_name: string
   }
 
+  export interface Root {
+    user_id: string
+    email_id: string
+    last_name: string
+    middle_name: string
+    first_name: string
+    address: string
+    gender: string
+    profile_photo: string
+    date_of_birth: string
+    status_set: string
+  }
   
   

@@ -28,7 +28,6 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,9 +60,9 @@ import { AboutComponent } from './components/about/about.component';
     MatFormFieldModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule,
-
+    MatTableModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

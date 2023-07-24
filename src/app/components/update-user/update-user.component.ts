@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Payload, User } from 'src/app/model/model';
+import { Payload, Root, User } from 'src/app/model/model';
 import { UserSharedService } from 'src/app/service/user-shared.service';
 import { UserService } from 'src/app/service/user.service';
 import Swal from 'sweetalert2';
@@ -26,17 +26,18 @@ export class UpdateUserComponent implements OnInit {
     this.initUpdateForm();
     this.userSharedService.getUserDetails().subscribe(data=>{
     console.log("data received",data);
+    this.updateForm.get("user_id")?.setValue(data?.user_id)
     this.updateForm.get("first_name")?.setValue(data?.first_name)
     this.updateForm.get("last_name")?.setValue(data?.last_name)
     this.updateForm.get("email_id")?.setValue(data?.email_id)
     this.updateForm.get("address")?.setValue(data?.address)
     if(data!=undefined){
+    this.updateBean.user_id=data?.user_id;
+    this.updateBean.middle_name="blank";
+    this.updateBean.status_set="blank";
+    this.updateBean.profile_photo="blank";
     this.updateBean.gender=data?.gender;
     this.updateBean.date_of_birth=data.date_of_birth;
-    this.updateBean.phone_number=data.phone_number;
-    this.updateBean.status=data.status;
-    this.updateBean.password="";
-    this.updateBean.user_roles=data.user_roles
     }
   })
   }
@@ -50,7 +51,7 @@ export class UpdateUserComponent implements OnInit {
     });
   }
 
-  updateBean:Payload=<Payload>{};
+  updateBean:Root=<Root>{};
   UpdateForm() {
     console.log('values of form', this.updateForm.value);
     this.updateBean.email_id=this.updateForm.get('email_id')?.value;
@@ -60,7 +61,9 @@ export class UpdateUserComponent implements OnInit {
     this.userService.updateUser(this.updateBean).subscribe(data=> {
     console.log("data",data)
     if (data.status) {
-      Swal.fire('updated successfully')
+      Swal.fire('updated successfully').then(() => {
+        this.router.navigate(['user-list']);
+      })
     } else {
       Swal.fire({
         icon: 'error',
