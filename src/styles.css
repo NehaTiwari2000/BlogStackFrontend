@@ -4,30 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
-}
-
-main {
-  background: #f8f8f86e;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
-}
-
-.nav_logo {
-  padding: 10px 0;
 }
 
 .menu_items {
@@ -41,65 +17,10 @@ a {
   text-decoration: none;
 }
 
-.curveImg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  pointer-events: none;
-}
-
-.hero .row {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  padding: 0 60px;
-  gap: 30px;
-  justify-content: space-between;
-}
-
-.hero .row .text,
-.hero .row p {
-  color:black;
-}
-
-.hero .row .text {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.hero .column {
-  width: 50%;
-}
-
-.buttons {
-  display: flex;
-  margin-top: 25px;
-  gap: 10px;
-}
-
-.btn {
-  padding: 14px 26px;
-  background: #f12b20;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color:#fff;;
-}
-
-.hero_img {
-    height: 5%;
-}
-
 #menu_toggle {
   display: none;
 }
 
-.nav_link :hover{
-color: black;
-}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
