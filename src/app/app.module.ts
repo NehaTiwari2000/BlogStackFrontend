@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,11 +25,15 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
     LoginComponent,
     NavbarComponent,
     BlogsComponent,
@@ -38,7 +41,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
     ContactComponent,
     UserProfileComponent,
     UserListComponent,
-    SideBarComponent
+    SideBarComponent,
+    UpdateUserComponent
 
   ],
   imports: [
@@ -57,7 +61,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
     MatFormFieldModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
 
   ],
   providers: [],

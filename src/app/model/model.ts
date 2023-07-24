@@ -1,14 +1,16 @@
 export interface User {
-    email_id: string
-    last_name: string
-    middle_name: string
-    first_name: string
-    gender: string
-    phone_number: string
-    password: string
-    date_of_birth: string
-    address: string
-  }
+  email_id: string
+  last_name: string
+  first_name: string
+  gender: string
+  phone_number: string
+  password: string
+  user_roles: UserRole[]
+  status: string
+  date_of_birth: string
+  address: string
+  profile_photo: string
+}
 
   export interface UserData {
     id: string;
@@ -18,6 +20,7 @@ export interface User {
   }
 
   export interface Payload {
+    password: any
     user_id: string
     email_id: string
     last_name: string

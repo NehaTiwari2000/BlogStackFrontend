@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { User } from 'src/app/model/model';
 import { AuthService } from 'src/app/service/auth.service';
 import  Swal from 'sweetalert2';
 
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
       last_name: ['', Validators.required],
       email_id: ['', Validators.required],
       password: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
     });
   }
 
@@ -41,16 +42,32 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  signBean:User=<User>{};
   signUpForm() {
     console.log('values of form', this.signUp.value);
-    this.authService.signUp(this.signUp.value).subscribe((data) => {
+    this.signBean.email_id=this.signUp.get('email_id')?.value;
+    this.signBean.first_name=this.signUp.get('first_name')?.value;
+    this.signBean.last_name=this.signUp.get('last_name')?.value;
+    this.signBean.password=this.signUp.get('password')?.value;
+    this.signBean.user_roles=[];
+    this.signBean.user_roles.push({"role_name":"user"})
+    this.signBean.address="";
+    this.signBean.gender="";
+    this.signBean.date_of_birth="";
+    this.signBean.phone_number="";
+    this.signBean.profile_photo="";
+    this.signBean.status="";
+    this.authService.signUp(this.signBean).subscribe((data) => {
       console.log(data);
+      if (data.status) {
+        Swal.fire('Successfully Registered')
+      }
     });
     if (
       this.signUp.get('password')?.value !=
       this.signUp.get('confirmPassword')?.value
     ) {
-      alert('password not matched');
+      Swal.fire('Password not matched');
     }
     Object.values(this.signUp.controls).forEach((control) => {
       if (control.invalid) {
@@ -67,7 +84,7 @@ export class LoginComponent implements OnInit {
       if (data.status) {
         localStorage.setItem('jwt_token', data.data.jwt_token);
         localStorage.setItem('user_id', data.data.user_id);
-        if (data.data.user_id == 'Atiya@gmail.com') {
+        if (data.data.user_id == 'atiya@gmail.com') {
           localStorage.setItem('role', 'admin');
         } else localStorage.setItem('role', 'user');
         Swal.fire('Successfully Login').then(() => {

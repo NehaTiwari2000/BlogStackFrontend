@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Payload } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,11 @@ export class UserService {
     return this.httpClient.get(this.baseUrl);
   }
 
+  public updateUser(user: Payload): Observable<any>{
+    return this.httpClient.put(this.baseUrl, user);
+   }
+
+  public deleteUser(email_id: Payload): Observable<any>{
+    return this.httpClient.delete(this.baseUrl + email_id);
+  }
 }
