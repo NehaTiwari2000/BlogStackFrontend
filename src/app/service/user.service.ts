@@ -6,12 +6,14 @@ import { Payload, Root } from '../model/model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
 
-  baseUrl = 'http://ec2-18-212-53-8.compute-1.amazonaws.com:9091/v1.0/user/'
+  // baseUrl = 'http://ec2-18-212-53-8.compute-1.amazonaws.com:9091/v1.0/user/'
 
-  constructor(private httpClient: HttpClient) {
-  }
+  baseUrl = 'http://localhost:9091/v1.0/user/'
+
+  constructor(private httpClient: HttpClient) { }
 
   public fetchAll(): Observable<any>{
     return this.httpClient.get(this.baseUrl);

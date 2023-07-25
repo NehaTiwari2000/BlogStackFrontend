@@ -8,6 +8,19 @@ import Swal from 'sweetalert2';
   styleUrls: ['./blogs.component.css']
 })
 export class BlogsComponent implements OnInit {
+  search!:string;
+  role!:string|null;
+  toggleButton:boolean= false;
+
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
+    this.role=localStorage?.getItem("role")
+    console.log("the role value is",this.role)
+  }
+
+  logout(){
+    localStorage.clear();
+    Swal.fire('Successfully Logout').then(()=>{this.router.navigate([""])})
   }
 }

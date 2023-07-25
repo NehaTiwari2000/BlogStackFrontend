@@ -10,6 +10,7 @@ import  Swal from 'sweetalert2';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
+
 export class LoginComponent implements OnInit {
   signUp!: FormGroup;
   LoginForm!: FormGroup;
@@ -49,8 +50,8 @@ export class LoginComponent implements OnInit {
     this.signBean.first_name=this.signUp.get('first_name')?.value;
     this.signBean.last_name=this.signUp.get('last_name')?.value;
     this.signBean.password=this.signUp.get('password')?.value;
-    this.signBean.user_roles=[];
-    this.signBean.user_roles.push({"role_name":"user"})
+    this.signBean.blogStackRoleDetails=[];
+    this.signBean.blogStackRoleDetails.push({"role_name":"user"})
     this.signBean.address="";
     this.signBean.gender="";
     this.signBean.date_of_birth="";

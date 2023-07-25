@@ -32,7 +32,6 @@ body::after {
 section {
   position: relative;
   z-index: 3;
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 

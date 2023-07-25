@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from 'src/app/service/user.service';
 import { Payload, Root, User, UserData } from 'src/app/model/model';
 import { UserSharedService } from 'src/app/service/user-shared.service';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-user-list',
@@ -14,22 +15,23 @@ import { UserSharedService } from 'src/app/service/user-shared.service';
 })
 
 export class UserListComponent implements OnInit {
+  search!:string;
+  role!:string|null;
+  toggleButton:boolean= false;
   displayedColumns: string[] = ['id','emailId', 'firstName', 'lastName',];
   userList:Payload[]=[]
-  firstName: any;
-  page: number = 1;
-  count: number = 0;
-  tableSize: number= 4;
-  tablesSizes: any= [] ;
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource: any;
  
-  constructor(private userServive: UserService,private router: Router,
-    private userSharedService:UserSharedService) {  
-    }
+  constructor(
+    private userServive: UserService,
+    private router: Router,
+    private userSharedService:UserSharedService) { }
 
   ngOnInit(): void {
+    this.role=localStorage?.getItem("role")
+    console.log("the role value is",this.role)
     this.getUsers();
     // Swal.fire({
     // text:"successfully login",
@@ -37,6 +39,11 @@ export class UserListComponent implements OnInit {
     // confirmButtonText:"Ok",
     // background:"black",
     // });
+  }
+
+  logout(){
+    localStorage.clear();
+    Swal.fire('Successfully Logout').then(()=>{this.router.navigate([""])})
   }
 
   ngAfterViewInit(): void {

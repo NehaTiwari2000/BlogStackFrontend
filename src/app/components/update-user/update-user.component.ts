@@ -33,9 +33,9 @@ export class UpdateUserComponent implements OnInit {
     this.updateForm.get("address")?.setValue(data?.address)
     if(data!=undefined){
     this.updateBean.user_id=data?.user_id;
-    this.updateBean.middle_name="blank";
-    this.updateBean.status_set="blank";
-    this.updateBean.profile_photo="blank";
+    this.updateBean.status_set=data?.status;
+    this.updateBean.middle_name="";
+    this.updateBean.profile_photo="";
     this.updateBean.gender=data?.gender;
     this.updateBean.date_of_birth=data.date_of_birth;
     }

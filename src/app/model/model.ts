@@ -1,11 +1,12 @@
 export interface User {
+  status_set: any
+  blogStackRoleDetails: any
   email_id: string
   last_name: string
   first_name: string
   gender: string
   phone_number: string
   password: string
-  user_roles: UserRole[]
   status: string
   date_of_birth: string
   address: string
@@ -20,7 +21,6 @@ export interface User {
   }
 
   export interface Payload {
-    get(arg0: string): unknown
     password: any
     user_id: string
     email_id: string
@@ -28,7 +28,7 @@ export interface User {
     first_name: string
     gender: string
     phone_number: string
-    user_roles: UserRole[]
+    blogStackRoleDetails: any
     status: string
     date_of_birth: string
     address: string

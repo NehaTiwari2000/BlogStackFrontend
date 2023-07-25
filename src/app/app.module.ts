@@ -23,10 +23,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { StackComponent } from './components/stack/stack.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import { AboutComponent } from './components/about/about.component';
     ContactComponent,
     UserProfileComponent,
     UserListComponent,
-    SideBarComponent,
     UpdateUserComponent
 
   ],
@@ -60,7 +59,8 @@ import { AboutComponent } from './components/about/about.component';
     MatFormFieldModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatSlideToggleModule
   ],
 
   providers: [],

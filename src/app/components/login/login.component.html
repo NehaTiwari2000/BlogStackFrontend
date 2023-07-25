@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
+
 <div class="container">
   <div class="row">
-    <div class="col-6" style="padding-top: 10%; position: static">
+    <div class="col-6">
       <mat-tab-group>
         <mat-tab label="Login">
           <form class="example-form" [formGroup]="LoginForm">
@@ -16,10 +17,9 @@
               </mat-form-field>
             </div>
           </form>
-          <button mat-raised-button color="warn" class="btnstyle" (click)="login()">
-            Login
-          </button>
+          <button mat-raised-button color="warn" class="btnstyle" (click)="login()">Login</button>
         </mat-tab>
+
         <mat-tab label="SignUp">
           <form class="example-form" [formGroup]="signUp">
             <div style="padding: 20px">
@@ -45,12 +45,11 @@
               </mat-form-field>
             </div>
           </form>
-          <button mat-raised-button color="warn" class="btnstyle" (click)="signUpForm()">
-            SignUp
-          </button>
+          <button mat-raised-button color="warn" class="btnstyle" (click)="signUpForm()">SignUp</button>
         </mat-tab>
       </mat-tab-group>
     </div>
+
     <div class="col-6">
       <img src="../../assets/hero.gif" alt="heroImg" />
     </div>
