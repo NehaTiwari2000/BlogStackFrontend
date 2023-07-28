@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Payload, Root } from '../model/model';
+import { Payload, Root , User } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +25,17 @@ export class UserService {
 
   public deleteUser(email_id: string): Observable<any>{
     return this.httpClient.delete(this.baseUrl + email_id);
+  }
+
+  public fetchByEmailId(email_id:string | null): Observable<any>{
+    return this.httpClient.get(this.baseUrl + email_id);
+  }
+
+  public updateUserProfile(user:User):Observable<any>{
+    return this.httpClient.put(this.baseUrl,user);
+  }
+
+  public uploadProfilePhoto(email:string,formData:FormData):Observable<any>{
+    return this.httpClient.put(this.baseUrl +"profile-photo/"+ email , formData );
   }
 }

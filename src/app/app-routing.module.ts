@@ -8,6 +8,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: "stack", component:StackComponent},
   {path: "contact", component:ContactComponent},
   {path: "user-list", component:UserListComponent},
-  {path: "update-user", component:UpdateUserComponent}
+  {path: "update-user", component:UpdateUserComponent},
+  {path: "update-profile",component:UpdateProfileComponent}
 ];
 
 @NgModule({

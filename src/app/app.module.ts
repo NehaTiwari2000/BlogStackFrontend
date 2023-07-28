@@ -27,7 +27,10 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,8 +43,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     ContactComponent,
     UserProfileComponent,
     UserListComponent,
-    UpdateUserComponent
-
+    UpdateUserComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
+   
+
   ],
 
   providers: [],

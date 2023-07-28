@@ -73,6 +73,7 @@ export class LoginComponent implements OnInit {
       Swal.fire('Password not matched');
     }
     Object.values(this.signUp.controls).forEach((control) => {
+      
       if (control.invalid) {
         control.markAsDirty();
         control.updateValueAndValidity({ onlySelf: true });

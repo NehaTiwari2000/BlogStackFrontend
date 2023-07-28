@@ -51,5 +51,11 @@ export interface User {
     date_of_birth: string
     status_set: string
   }
+export enum Gender{
+  MALE = 'Male',
+  FEMALE = 'Female',
+  OTHER = 'Other'
+}
+  
   
   
