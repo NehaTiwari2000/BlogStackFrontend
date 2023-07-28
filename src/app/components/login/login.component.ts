@@ -87,6 +87,7 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data.status) {
         localStorage.setItem('jwt_token', data.data.jwt_token);
+        localStorage.setItem('refresh_token',data.data.refresh_token);
         localStorage.setItem('user_id', data.data.user_id);
         if (data.data.user_id == 'atiya@gmail.com') {
           localStorage.setItem('role', 'admin');
