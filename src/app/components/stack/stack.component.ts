@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-blogs',
-  templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.css']
+  selector: 'app-stack',
+  templateUrl: './stack.component.html',
+  styleUrls: ['./stack.component.css']
 })
-export class BlogsComponent implements OnInit {
+export class StackComponent implements OnInit {
   search!:string;
   role!:string|null;
   toggleButton:boolean= false;

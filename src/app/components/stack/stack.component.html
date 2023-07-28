@@ -5,7 +5,7 @@
       (click)="sidenav.toggle()">
       <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
       <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-    </button>
+</button>
     
     <nav class="nav container" style=" padding: 25px 60px;">
         <h2 class="nav_logo text"><a href="#"><a style="color: black;"><b>Blog</b></a><a style="color:#f12b20;"><b>Stack</b></a></a></h2>
@@ -18,17 +18,19 @@
               </div>
             </div>
         </div>
-
-      <img src="../../assets/bars.svg" alt="timesicon" id="menu_toggle" />
+        <img src="../../assets/bars.svg" alt="timesicon" id="menu_toggle" />
     </nav>
 </mat-toolbar>
-
+  
   <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
       <img class="avatar mat-elevation-z8" src="../../../assets/admin.png"/>
+      <div>
       <h4 class="name">Admin</h4>
-
-     <app-user-profile></app-user-profile>
+      <a routerLink="/update-profile">EDIT </a>
+      </div>
+  
+    <app-user-profile></app-user-profile>
   
       <button mat-button class="menu-button" routerLink="">
         <mat-icon>home</mat-icon>
@@ -42,9 +44,9 @@
         <mat-icon>person</mat-icon>
         <span>Login</span></button>
   
-      <button mat-button class="menu-button" routerLink="/stack" *ngIf="role!='admin'">
+      <button mat-button class="menu-button" routerLink="/blogs" *ngIf="role!='admin'">
         <mat-icon>dashboard</mat-icon>
-        <span>Stack</span>
+        <span>Blog</span>
       </button>
       
       <button mat-button class="menu-button" routerLink="" *ngIf="role=='admin'">
@@ -58,9 +60,17 @@
       <button mat-button class="menu-button" (click)="logout()" *ngIf="role !=null">
         <mat-icon>logout</mat-icon>
         <span>Logout</span></button>
-
     </mat-sidenav>
+    
     <mat-sidenav-content>
-      <div class="content mat-elevation-z8"></div>
+      <div class="content mat-elevation-z8">
+        <div class="container">
+          <div class="row">
+            <div class="col-9">.col-9</div>
+            <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+            <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+          </div>
+        </div>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>  

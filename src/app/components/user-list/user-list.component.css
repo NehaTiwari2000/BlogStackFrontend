@@ -1,4 +1,17 @@
-mat-toolbar {
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+  mat-toolbar {
     background: white;
     color: white;
   }
@@ -10,15 +23,12 @@ mat-toolbar {
   a{
     text-decoration: none;
       color:#f12b20;
-
 }
 
 .menu_items{
   font-size: 1rem;
 }
 
-
-  
   mat-sidenav {
     margin: 16px;
     width: 200px;
@@ -84,4 +94,10 @@ mat-toolbar {
   .mat-form-field-wrapper {
     position: relative;
     color: black;
+}
+
+
+.mat-slide-toggle{
+  padding-left: 5%;
+  padding-top: 2.8%;
 }
