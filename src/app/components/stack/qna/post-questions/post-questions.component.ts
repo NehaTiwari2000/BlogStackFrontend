@@ -4,6 +4,7 @@ import { Observable, startWith, map } from 'rxjs';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { postQuestionBean } from 'src/app/model/model';
 
 @Component({
   selector: 'app-post-questions',
@@ -32,14 +33,16 @@ export class PostQuestionsComponent implements OnInit {
     'IDE'
   ];
 
-  firstFormGroup = this._formBuilder.group({
+  firstFormGroup = this.fb.group({
     questionCtrl: ['', Validators.required],
   });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+  secondFormGroup = this.fb.group({
+    categoryCtrl: ['', Validators.required],
+    subcategoryCtrl: ['', Validators.required],
+    // tagCtrl: ['', Validators.required],
   });
-  thirdFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required]
+  thirdFormGroup = this.fb.group({
+    codeCtrl: ''
   });
 
   constructor(
@@ -55,9 +58,18 @@ export class PostQuestionsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  postQuestion() {
-
+  postQuestionBean: postQuestionBean=<postQuestionBean>{}
+  postQuestion() { 
+    this.postQuestionBean.question = this.firstFormGroup.get('questionCtrl')?.value
+    this.postQuestionBean.categoryId = this.secondFormGroup.get('categoryCtrl')?.value
+    this.postQuestionBean.subCategoryId = this.secondFormGroup.get('subcategoryCtrl')?.value
+    this.postQuestionBean.tagId = this.secondFormGroup.get('tagCtrl')?.value
+    this.postQuestionBean.codeSnippet = this.thirdFormGroup.get('codeCtrl')?.value
+    this.postQuestionBean.status = "ACTIVE"
+    this.postQuestionBean.userId = "USERID23234234"
+    console.log("postQBean",this.postQuestionBean);
   }
+
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 

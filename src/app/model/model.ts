@@ -82,3 +82,12 @@ export interface Answer {
   added_on: string
 }
 
+export interface postQuestionBean{
+question: string
+status :string
+userId : string
+codeSnippet : string
+tagId : string
+categoryId : string
+subCategoryId: string
+}
