@@ -32,6 +32,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
+import { CategoryComponent } from './components/category/category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { RoutingErrorComponent } from './components/routing-error/routing-error.
     UserListComponent,
     UpdateUserComponent,
     UpdateProfileComponent,
-    RoutingErrorComponent
+    RoutingErrorComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

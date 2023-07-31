@@ -1,3 +1,5 @@
+import { Inject } from "@angular/core"
+
 export interface User {
   status_set: any
   blogStackRoleDetails: any
@@ -50,6 +52,13 @@ export interface User {
     profile_photo: string
     date_of_birth: string
     status_set: string
+  }
+
+  
+  export interface Category{
+    bscmStatus : string,
+    bscmCategory : string,
+    bscmCategoryId : string
   }
 export enum Gender{
   MALE = 'Male',
