@@ -31,6 +31,7 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { MatSelectModule } from '@angular/material/select';
     UserProfileComponent,
     UserListComponent,
     UpdateUserComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    RoutingErrorComponent
   ],
   imports: [
     BrowserModule,
