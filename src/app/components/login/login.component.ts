@@ -100,6 +100,7 @@ export class LoginComponent implements OnInit {
       if (data.status) {
         localStorage.setItem('jwt_token', data.data.jwt_token);
         localStorage.setItem('user_id', data.data.user_id);
+        localStorage.setItem('refresh_token', data.data.refresh_token);
         if (data.data.user_id == 'atiya@gmail.com') {
           localStorage.setItem('role', 'admin');
         } else localStorage.setItem('role', 'user');

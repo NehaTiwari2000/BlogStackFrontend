@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class QnaService {
 
-  baseUrl = "http://localhost:9090/v1.0/question/"
+  baseUrl = "http://localhost:8080/v1.0/question/"
   constructor(private httpClient: HttpClient) { }
 
   public fetchAllQuestions(): Observable<any> {
