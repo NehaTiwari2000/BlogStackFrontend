@@ -5,15 +5,15 @@ import { Category } from '../model/model';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryServiceService {
+export class CategoryService {
 
-  baseUrl = "http//localhost:9090"
+  baseUrl = 'http://localhost:9090/v1.0/category/'
   
   
-  constructor(private httpClient: HttpClient,
-              private obsevable: Observable<Category>) {}
+  constructor(private httpClient: HttpClient) {}
 
-  public fetchAll():Observable<any>{
+  public fetchAll() : Observable<any>{
+    console.log("Before making api call")
     return this.httpClient.get(this.baseUrl);
   }
 

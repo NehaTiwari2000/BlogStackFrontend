@@ -57,8 +57,12 @@ export interface User {
   
   export interface Category{
     bscmStatus : string,
-    bscmCategory : string,
+    category : string,
     bscmCategoryId : string
+  }
+
+  export interface Subcategory{
+    
   }
 export enum Gender{
   MALE = 'Male',

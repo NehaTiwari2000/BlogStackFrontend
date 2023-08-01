@@ -33,6 +33,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { CategoryComponent } from './components/category/category.component';
     UpdateUserComponent,
     UpdateProfileComponent,
     RoutingErrorComponent,
-    CategoryComponent
+    CategoryComponent,
+    ServiceUnavailableComponent
   ],
   imports: [
     BrowserModule,
