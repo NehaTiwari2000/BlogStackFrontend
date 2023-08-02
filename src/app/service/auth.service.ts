@@ -2,11 +2,6 @@ import { HttpClient,HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, ObservableInput } from 'rxjs';
 import { User } from '../model/model';
-import { catchError} from 'rxjs/operators';
-
-
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +11,7 @@ export class AuthService {
   
   baseUrl = 'http://localhost:8080/v1.0/authentication'
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private router: Router) {
   }
 
   public signUp(user: User): Observable<any> {
@@ -29,5 +24,14 @@ export class AuthService {
         console.log("Response : ",res)
         return res
     }))
+  }
+
+  public refreshToken(): Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"/refresh-token"+localStorage.getItem('refresh-token'), " ")
+  }
+
+  signOut() {
+    localStorage.clear();
+    Swal.fire('Successfully Logout').then(()=>{this.router.navigate([""])})
   }
 }

@@ -15,6 +15,7 @@ import { ServiceUnavailableComponent } from './components/service-unavailable/se
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent},
   {path: "login", component: LoginComponent},
   {path: "blogs", component: BlogsComponent},

@@ -26,14 +26,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+<<<<<<< HEAD
 import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
+=======
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { QnaModule } from './components/stack/qna/qna.module';
+
+>>>>>>> a292ce8c4c569a9439d4ee5aadc86b2ab966e7fd
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,10 +79,14 @@ import { ServiceUnavailableComponent } from './components/service-unavailable/se
     MatSlideToggleModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
-   
+    MatSelectModule,
+    MatListModule,
+    MatCardModule,
+
+
 
   ],
+  exports: [QnaModule],
 
   providers: [],
   bootstrap: [AppComponent]
