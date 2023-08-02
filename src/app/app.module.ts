@@ -32,15 +32,25 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
 =======
+=======
+
+import { RoutingErrorComponent } from './components/routing-error/routing-error.component';
+import { CategoryComponent } from './components/category/category.component';
+
+>>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { QnaModule } from './components/stack/qna/qna.module';
 
+<<<<<<< HEAD
 >>>>>>> a292ce8c4c569a9439d4ee5aadc86b2ab966e7fd
+=======
+>>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
 @NgModule({
   declarations: [
     AppComponent,

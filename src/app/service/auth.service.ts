@@ -2,6 +2,17 @@ import { HttpClient,HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, ObservableInput } from 'rxjs';
 import { User } from '../model/model';
+<<<<<<< HEAD
+=======
+import { catchError} from 'rxjs/operators';
+
+
+
+
+=======
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+>>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
 
 @Injectable({
   providedIn: 'root'
