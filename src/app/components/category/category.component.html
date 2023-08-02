@@ -12,8 +12,8 @@
             </thead>
             <tbody>
                 <tr *ngFor="let user of categoryList">
-                    <td> {{ user.category }} </td>
-                    <td><button type="button" class="btn btn-dark" (click) = "viewAll()" style="color: white;">View</button></td>
+                    <td #category> {{ user.category }} </td>
+                    <td><button type="button" class="btn btn-dark" (click) = "viewAll(user.category)" style="color: white;">View</button></td>
                 </tr>
             </tbody>
         </table>

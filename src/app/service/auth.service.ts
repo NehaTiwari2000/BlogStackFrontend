@@ -3,13 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, ObservableInput } from 'rxjs';
 import { User } from '../model/model';
 import { catchError} from 'rxjs/operators';
-
-
-
-
-=======
 import Swal from 'sweetalert2';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'
 
 @Injectable({
   providedIn: 'root'

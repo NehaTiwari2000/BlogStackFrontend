@@ -65,7 +65,7 @@ export interface User {
   export interface Subcategory{
     
   }
-export enum Gender{
+
 
 export interface UserData {
   id: string;
@@ -147,4 +147,8 @@ export interface PostQuestionBean{
   tag_id: string
   category_id: string
   sub_category_id: string
+}
+
+export interface questionAnswerByCAtegory{
+  category: string
 }
