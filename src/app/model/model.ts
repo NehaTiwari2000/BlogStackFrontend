@@ -60,7 +60,8 @@ export enum Gender {
 
 
 export interface Question {
-  question: string
+  content: string
+  title: string
   status: string
   question_id: string
   user_id: string
@@ -82,12 +83,14 @@ export interface Answer {
   added_on: string
 }
 
-export interface postQuestionBean{
-question: string
-status :string
-userId : string
-codeSnippet : string
-tagId : string
-categoryId : string
-subCategoryId: string
+export interface PostQuestionBean{
+  content: string
+  title: string
+  status: string
+  question_id: string
+  user_id: string
+  code_snippet: string
+  tag_id: string
+  category_id: string
+  sub_category_id: string
 }

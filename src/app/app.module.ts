@@ -73,11 +73,9 @@ import { QnaModule } from './components/stack/qna/qna.module';
     MatSelectModule,
     MatListModule,
     MatCardModule,
-
-
-
+    QnaModule
   ],
-  exports: [QnaModule],
+  exports: [],
 
   providers: [],
   bootstrap: [AppComponent]
