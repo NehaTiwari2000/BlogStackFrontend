@@ -145,3 +145,7 @@ tagId : string
 categoryId : string
 subCategoryId: string
 }
+
+export interface questionAnswerByCAtegory{
+  category: string
+}
