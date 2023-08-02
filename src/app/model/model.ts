@@ -95,3 +95,7 @@ export interface PostQuestionBean{
   category_id: string
   sub_category_id: string
 }
+
+export interface questionAnswerByCAtegory{
+  category: string
+}

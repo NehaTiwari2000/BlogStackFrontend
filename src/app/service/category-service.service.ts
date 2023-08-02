@@ -8,6 +8,7 @@ import { Category } from '../model/model';
 export class CategoryService {
 
   baseUrl = 'http://localhost:9090/v1.0/category/'
+  questionByCategoryurl = 'http://localhost:9090/v1.0/question/category/'
   
   
   constructor(private httpClient: HttpClient) {}
@@ -27,5 +28,10 @@ export class CategoryService {
 
   public deleteCategory(id:number){
     return this.httpClient.delete(this.baseUrl+id);
+  }
+
+  public getQuestionByCategory(data : string): Observable<any>{
+    console.log(data)
+    return this.httpClient.get(this.questionByCategoryurl+data)
   }
 }

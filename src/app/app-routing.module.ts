@@ -12,6 +12,7 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import {RoutingErrorComponent} from './components/routing-error/routing-error.component'
 import { CategoryComponent } from './components/category/category.component';
 import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
+import { QuestionsByCategoryComponent } from './components/questions-by-category/questions-by-category.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
