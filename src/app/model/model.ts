@@ -42,10 +42,6 @@ export interface User {
     role_name: string
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
   export interface Root {
     user_id: string
     email_id: string
@@ -69,10 +65,7 @@ export interface User {
   export interface Subcategory{
     
   }
-export enum Gender{
-<<<<<<< HEAD
-=======
-=======
+
 
 export interface UserData {
   id: string;
@@ -96,7 +89,6 @@ export interface Payload {
   middle_name?: string
 }
 
->>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
 export interface UserRole {
   role_name: string
 }
@@ -114,10 +106,6 @@ export interface Root {
   status_set: string
 }
 export enum Gender {
-<<<<<<< HEAD
->>>>>>> a292ce8c4c569a9439d4ee5aadc86b2ab966e7fd
-=======
->>>>>>> dfd6a6c7c910b83f2906fbf8a5034b3e7d217587
   MALE = 'Male',
   FEMALE = 'Female',
   OTHER = 'Other'
