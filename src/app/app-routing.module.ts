@@ -9,6 +9,9 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { AboutComponent } from './components/about/about.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import {RoutingErrorComponent} from './components/routing-error/routing-error.component'
+import { CategoryComponent } from './components/category/category.component';
+import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -20,7 +23,10 @@ const routes: Routes = [
   {path: "contact", component:ContactComponent},
   {path: "user-list", component:UserListComponent},
   {path: "update-user", component:UpdateUserComponent},
-  {path: "update-profile",component:UpdateProfileComponent}
+  {path: "update-profile",component:UpdateProfileComponent},
+  {path: "category",component:CategoryComponent},
+  {path:"service-unavailable",component: ServiceUnavailableComponent},
+  {path: "**",component:RoutingErrorComponent}
 ];
 
 @NgModule({
