@@ -7,7 +7,7 @@ import { catchError} from 'rxjs/operators';
 
 
 
-=======
+
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 

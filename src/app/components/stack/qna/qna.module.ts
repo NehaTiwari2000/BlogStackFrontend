@@ -49,7 +49,8 @@ import { CategoryComponent } from './components/category/category.component';
   exports: [
     QnaRoutingModule,
     QuestionListComponent,
-    CategoryComponent
+    CategoryComponent,
+    PostQuestionsComponent
   ],
 })
 export class QnaModule { }

@@ -38,6 +38,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { QnaModule } from './components/stack/qna/qna.module';
+import { ServiceUnavailableComponent } from './components/service-unavailable/service-unavailable.component';
 
 @NgModule({
   declarations: [

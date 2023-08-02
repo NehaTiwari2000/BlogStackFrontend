@@ -26,6 +26,10 @@ const routes: Routes = [
   {path: "update-profile",component:UpdateProfileComponent},
   {path: "category",component:CategoryComponent},
   {path:"service-unavailable",component: ServiceUnavailableComponent},
+  {
+    path:'stack',loadChildren:()=>import('../app/components/stack/qna/qna.module').then(m=>m.QnaModule)
+  },
+  //Please dont move this, error component should be last path 
   {path: "**",component:RoutingErrorComponent}
 ];
 
